@@ -13,7 +13,8 @@ public class Personagem extends ElementoBasico {
     
     public void moveDireita() {
         // Remove o Personagem da posicao atual e avança
-        getTabuleiro().insereElemento(anterior);
+        Lava lava = new Lava("id", "Imagens/Lava.png", anterior.getLin(), anterior.getCol(), getTabuleiro());
+        getTabuleiro().insereElemento(lava);
         this.incCol();
         // Verifica se tem algum elemento de interesse na nova posicao
         // e interage de acordo
@@ -29,7 +30,8 @@ public class Personagem extends ElementoBasico {
 
     public void moveEsquerda() {
         // Remove o Personagem da posicao atual e avança
-        getTabuleiro().insereElemento(anterior);
+        Lava lava = new Lava("id", "Imagens/Lava.png", anterior.getLin(), anterior.getCol(), getTabuleiro());
+        getTabuleiro().insereElemento(lava);
         this.decCol();
         // Verifica se tem algum elemento de interesse na nova posicao
         // e interage de acordo
@@ -45,7 +47,8 @@ public class Personagem extends ElementoBasico {
 
     public void moveCima() {
         // Remove o Personagem da posicao atual e avança
-        getTabuleiro().insereElemento(anterior);
+        Lava lava = new Lava("id", "Imagens/Lava.png", anterior.getLin(), anterior.getCol(), getTabuleiro());
+        getTabuleiro().insereElemento(lava);        
         this.decLin();
         // Verifica se tem algum elemento de interesse na nova posicao
         // e interage de acordo
@@ -61,8 +64,8 @@ public class Personagem extends ElementoBasico {
 
     public void moveBaixo() {
         // Remove o Personagem da posicao atual e avança
-        getTabuleiro().insereElemento(anterior);
-        //getTabuleiro().insereElemento(anterior);
+        Lava lava = new Lava("id", "Imagens/Lava.png", anterior.getLin(), anterior.getCol(), getTabuleiro());
+        getTabuleiro().insereElemento(lava);
         this.incLin();
         // Verifica se tem algum elemento de interesse na nova posicao
         // e interage de acordo

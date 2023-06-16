@@ -1,8 +1,8 @@
+
 import javax.swing.JOptionPane;
 
 public class Porta extends ElementoBasico {
     private int nroPista;
-    private static int tentativas = 0;
 
     public Porta(String id, int nroPista, int linInicial, int colInicial, Tabuleiro tabuleiro) {
         super(id, "Imagens/Porta.png", linInicial, colInicial, tabuleiro);
@@ -15,19 +15,13 @@ public class Porta extends ElementoBasico {
 
     @Override
     public void acao(ElementoBasico outro) {
-        if (tentativas == 3){
-            JOptionPane.showMessageDialog(getRootPane(), "Muitas tentativas, você perdeu!");
-            System.exit(0);
-        }
-        String codigo = JOptionPane.showInputDialog(getRootPane(), "Digite o código");
-        if (codigo.equals("2215") || codigo.equals("1522")) {
-            setImage(Tabuleiro.createImageIcon("ecaDead" + nroPista + ".jpg"));
-            getTabuleiro().atualizaVisualizacao();
-            JOptionPane.showMessageDialog(getRootPane(), "Parabens você ganhou");
+        int num = Alavanca.getAlavancasAcionadas();
+        if (num == 5) {
+            JOptionPane.showMessageDialog(getRootPane(), "Parabéns, você ganhou!");
             System.exit(0);
         } else {
-            JOptionPane.showMessageDialog(getRootPane(), "Código inválido! Continue tentando");
+            JOptionPane.showMessageDialog(getRootPane(), "Você perdeu!");
+            System.exit(0);
         }
-        tentativas++;
     }
 }

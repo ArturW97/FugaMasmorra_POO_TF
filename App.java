@@ -7,6 +7,7 @@ import javax.swing.SwingUtilities;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class App extends JFrame implements ActionListener{
     private Tabuleiro tabuleiro;
@@ -41,7 +42,7 @@ public class App extends JFrame implements ActionListener{
         painelGeral.add(sp);
         painelGeral.add(botoesDirecao);
         // Insere os personagens no tabuleiro
-        personagem = new Personagem("Feliz","icone.jpg",2,0,tabuleiro);
+        personagem = new Personagem("Feliz","Imagens/Personagem.png",2,0,tabuleiro);
         ElementoBasico anterior = tabuleiro.insereElemento(personagem);
         personagem.setAnterior(anterior);
 
@@ -55,6 +56,32 @@ public class App extends JFrame implements ActionListener{
         tabuleiro.insereElemento(Alavanca4);
         Alavanca Alavanca5 = new Alavanca("Alavanca5",5,5, 11,tabuleiro);
         tabuleiro.insereElemento(Alavanca5);
+
+        Espinhos espinhos1 = new Espinhos("espinhos1", 0, 1, 0, tabuleiro);
+        tabuleiro.insereElemento(espinhos1);
+        Espinhos espinhos2 = new Espinhos("espinhos2", 0, 2, 2, tabuleiro);
+        tabuleiro.insereElemento(espinhos2);
+        Espinhos espinhos3 = new Espinhos("espinhos3", 0, 3, 2, tabuleiro);
+        tabuleiro.insereElemento(espinhos3);
+        Espinhos espinhos4 = new Espinhos("espinhos4", 0, 1, 4, tabuleiro);
+        tabuleiro.insereElemento(espinhos4);
+        Espinhos espinhos5 = new Espinhos("espinhos5", 0, 2, 4, tabuleiro);
+        tabuleiro.insereElemento(espinhos5);
+        Espinhos espinhos6 = new Espinhos("espinhos6", 0, 4, 4, tabuleiro);
+        tabuleiro.insereElemento(espinhos6);
+        Espinhos espinhos7 = new Espinhos("espinhos7", 0, 0,6, tabuleiro);
+        tabuleiro.insereElemento(espinhos7);
+        Espinhos espinhos8 = new Espinhos("espinhos8", 0, 1,6, tabuleiro);
+        tabuleiro.insereElemento(espinhos8);
+        Espinhos espinhos9 = new Espinhos("espinhos9", 0, 3, 7, tabuleiro);
+        tabuleiro.insereElemento(espinhos9);
+        Espinhos espinhos10 = new Espinhos("espinhos10", 0, 4, 8, tabuleiro);
+        tabuleiro.insereElemento(espinhos10);
+        Espinhos espinhos11 = new Espinhos("espinhos11", 0, 4, 9, tabuleiro);
+        tabuleiro.insereElemento(espinhos11);
+        Espinhos espinhos12 = new Espinhos("espinhos12", 0, 2, 11, tabuleiro);
+        tabuleiro.insereElemento(espinhos12);
+
         Porta porta = new Porta("Porta1",2215,1,11,tabuleiro);
         tabuleiro.insereElemento(porta);
 
