@@ -12,16 +12,6 @@ public class App extends JFrame implements ActionListener{
     private Tabuleiro tabuleiro;
     private Personagem personagem;
 
-
-    /* TODO:
-     * não voltar 
-     * onde passar fica cor diferente
-     * botao reset
-     * onde pega a chave ele entra no quadrado
-     * portal (teleporte)
-     * porta final
-     * pedra (obstáculos)
-     */
     public App() {
         super();
         // Define os componentes da tela
@@ -55,12 +45,18 @@ public class App extends JFrame implements ActionListener{
         ElementoBasico anterior = tabuleiro.insereElemento(personagem);
         personagem.setAnterior(anterior);
 
-        Pista pista1 = new Pista("Pista15",15,2,4,tabuleiro);
-        tabuleiro.insereElemento(pista1);
-        Pista pista2 = new Pista("Pista22",22,0,2,tabuleiro);
-        tabuleiro.insereElemento(pista2);
-        Eca eca = new Eca("Eca2215",2215,1,11,tabuleiro);
-        tabuleiro.insereElemento(eca);
+        Alavanca Alavanca1 = new Alavanca("Alavanca1",22,0,0,tabuleiro);
+        tabuleiro.insereElemento(Alavanca1);
+        Alavanca Alavanca2 = new Alavanca("Alavanca2",15,5,1,tabuleiro);
+        tabuleiro.insereElemento(Alavanca2);
+        Alavanca Alavanca3 = new Alavanca("Alavanca3",22,2,5,tabuleiro);
+        tabuleiro.insereElemento(Alavanca3);
+        Alavanca Alavanca4 = new Alavanca("Alavanca4",15,1,7,tabuleiro);
+        tabuleiro.insereElemento(Alavanca4);
+        Alavanca Alavanca5 = new Alavanca("Alavanca5",5,5, 11,tabuleiro);
+        tabuleiro.insereElemento(Alavanca5);
+        Porta porta = new Porta("Porta1",2215,1,11,tabuleiro);
+        tabuleiro.insereElemento(porta);
 
         // Exibe a janela
         this.add(painelGeral);

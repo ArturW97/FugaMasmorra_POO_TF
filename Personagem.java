@@ -60,13 +60,8 @@ public class Personagem extends ElementoBasico {
     }
 
     public void moveBaixo() {
-        Lava lava = new Lava("id", "fundo.jpg", anterior.getLin(), anterior.getCol(), getTabuleiro());
-        // if(anterior instanceof Lava) {
-            
-        // }
-        
         // Remove o Personagem da posicao atual e avança
-        getTabuleiro().insereElemento(lava);
+        getTabuleiro().insereElemento(anterior);
         //getTabuleiro().insereElemento(anterior);
         this.incLin();
         // Verifica se tem algum elemento de interesse na nova posicao

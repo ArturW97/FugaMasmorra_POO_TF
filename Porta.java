@@ -1,11 +1,11 @@
 import javax.swing.JOptionPane;
 
-public class Eca extends ElementoBasico {
+public class Porta extends ElementoBasico {
     private int nroPista;
     private static int tentativas = 0;
 
-    public Eca(String id, int nroPista, int linInicial, int colInicial, Tabuleiro tabuleiro) {
-        super(id, "fundo.jpg", linInicial, colInicial, tabuleiro);
+    public Porta(String id, int nroPista, int linInicial, int colInicial, Tabuleiro tabuleiro) {
+        super(id, "Imagens/Porta.png", linInicial, colInicial, tabuleiro);
         this.nroPista = nroPista;
     }
 
