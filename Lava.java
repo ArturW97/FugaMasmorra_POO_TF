@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Lava extends ElementoBasico{
     private ElementoBasico anterior;
 
@@ -11,6 +13,7 @@ public class Lava extends ElementoBasico{
 
     @Override
     public void acao(ElementoBasico outro) {
-        if(true){}
+        JOptionPane.showMessageDialog(getRootPane(), "Você pisou na lava, fim do jogo!");
+            System.exit(0);
     }
 }
