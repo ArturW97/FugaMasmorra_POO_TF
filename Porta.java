@@ -17,10 +17,10 @@ public class Porta extends ElementoBasico {
     public void acao(ElementoBasico outro) {
         int num = Alavanca.getAlavancasAcionadas();
         if (num == 5) {
-            JOptionPane.showMessageDialog(getRootPane(), "Parabéns, você ganhou!");
+            JOptionPane.showMessageDialog(getRootPane(), "Parabéns, você conseguiu escapar da masmorra!");
             System.exit(0);
         } else {
-            JOptionPane.showMessageDialog(getRootPane(), "Você perdeu!");
+            JOptionPane.showMessageDialog(getRootPane(), "As alavancas não foram acionadas e a porta foi trancada. Você perdeu!");
             System.exit(0);
         }
     }

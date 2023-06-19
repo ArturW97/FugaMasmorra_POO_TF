@@ -1,7 +1,6 @@
-
-
 public class Personagem extends ElementoBasico {
     private ElementoBasico anterior;
+    public static int escorregadas = 0;
 
     public Personagem(String id, String iconPath, int linInicial, int colInicial, Tabuleiro tabuleiro) {
         super(id, iconPath, linInicial, colInicial, tabuleiro);
@@ -9,6 +8,14 @@ public class Personagem extends ElementoBasico {
 
     public void setAnterior(ElementoBasico anterior){
         this.anterior = anterior;
+    }
+
+    public static int getEscorregadas() {
+        return escorregadas;
+    }
+
+    public static void setEscorregadas() {
+        escorregadas++;
     }
     
     public void moveDireita() {

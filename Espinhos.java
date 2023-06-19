@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 public class Espinhos extends ElementoBasico {
 
     public Espinhos(String id, int nroPista, int linInicial, int colInicial, Tabuleiro tabuleiro){
@@ -7,6 +9,7 @@ public class Espinhos extends ElementoBasico {
 
     @Override
     public void acao(ElementoBasico outro) {
-        if(true){}
+        JOptionPane.showMessageDialog(getRootPane(), "A planta espinhosa te agarrou. Fim de jogo!");
+            System.exit(0);
     }
 }

@@ -13,7 +13,14 @@ public class Lava extends ElementoBasico{
 
     @Override
     public void acao(ElementoBasico outro) {
-        JOptionPane.showMessageDialog(getRootPane(), "Você pisou na lava, fim do jogo!");
+        if (Personagem.getEscorregadas() == 0) {
+            Personagem.setEscorregadas();
+            JOptionPane.showMessageDialog(getRootPane(), "Cuidado! Você quase caiu na lava.");
+            return;
+        }
+        else {
+            JOptionPane.showMessageDialog(getRootPane(), "Você caiu na lava. Fim de jogo!");
             System.exit(0);
+        }
     }
 }
